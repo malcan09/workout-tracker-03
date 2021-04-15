@@ -3,14 +3,14 @@ const router = require("express").Router();
 
 
   router.get("/api/workouts", function(req, res) {
-    db.Workout.find({}).then(function(dbImages) {
-      res.json(dbImages);
+    db.Workout.find({}).then(function(dbWorkouts) {
+      res.json(dbWorkouts);
     });
   });
 
   router.put("/api/workouts/:id", function(req, res) {
-    db.Image.updateOne({ _id: req.params.id }, { rating: req.body.rating }).then(function(dbImage) {
-      res.json(dbImage);
+    db.Workout.updateOne({ _id: req.params.id }, { rating: req.body.rating }).then(function(dbWorkouts) {
+      res.json(dbWorkouts);
     });
   });
 
