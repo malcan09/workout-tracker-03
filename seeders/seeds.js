@@ -1,16 +1,17 @@
 let mongoose = require("mongoose");
 let db = require("../models");
+//process.env.MONGODB_URI || 'mongodb://localhost/fitnessTracker',
 
 mongoose.connect(
-    process.env.MONGODB_URI || 'mongodb://localhost/fitnessTracker',
+    'mongodb+srv://malcan09:hola1395@cluster0.f4gun.mongodb.net/fitnessTracker?retryWrites=true&w=majority',
     {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-      useCreateIndex: true,
-      useFindAndModify: false
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        useCreateIndex: true,
+        useFindAndModify: false
     }
-  );
-  
+);
+
 
 let workoutSeed = [
     {

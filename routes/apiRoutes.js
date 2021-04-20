@@ -3,6 +3,7 @@ const db = require("../models");
 
 
 router.post("/api/workouts", ({ body }, res) => {
+    console.log(body)
     db.Workout.create(body)
         .then(dbWorkout => {
             res.json(dbWorkout);
@@ -37,6 +38,7 @@ router.put("/api/workouts/:id", (req, res) => {
 });
 
 router.get("/api/workouts", (req, res) => {
+    console.log('getting workout')
     db.Workout.find({})
         .then(dbWorkout => {
             res.json(dbWorkout);

@@ -16,6 +16,7 @@ app.use(express.json());
 
 app.use(require("./routes/apiRoutes"));
 app.use(require("./routes/htmlRoutes"));
+console.log(process.env.MONGODB_URI)
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/fitnessTracker", {
   useNewUrlParser: true,
