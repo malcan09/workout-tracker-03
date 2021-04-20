@@ -3,8 +3,8 @@ const db = require("../models");
 
 
 router.post("/api/workouts", ({ body }, res) => {
-    console.log(body)
-    db.Workout.create(body)
+    console.log("new workout", body)
+    db.Workout.create({})
         .then(dbWorkout => {
             res.json(dbWorkout);
         })
