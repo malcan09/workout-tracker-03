@@ -41,6 +41,7 @@ router.get("/api/workouts", (req, res) => {
     console.log('getting workout')
     db.Workout.find({})
         .then(dbWorkout => {
+            console.log('database values', dbWorkout); 
             res.json(dbWorkout);
         })
         .catch(err => {

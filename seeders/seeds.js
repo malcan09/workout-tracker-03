@@ -15,7 +15,7 @@ mongoose.connect(
 
 let workoutSeed = [
     {
-        day: new Date().setDate(new Date().getDate() - 10),
+        day: new Date().setDate(new Date().getDate() ),
         exercises: [
             {
                 type: "resistance",
